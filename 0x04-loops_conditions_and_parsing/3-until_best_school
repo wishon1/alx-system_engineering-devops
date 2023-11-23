@@ -2,7 +2,7 @@
 # Bash script that displays Best School 10 times with until loop
 
 i=0
-until (( i>10 ))
+until (( i>=10 ))
 do
     echo "Best School"
     (( i++ ))
