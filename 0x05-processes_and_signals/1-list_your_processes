@@ -3,4 +3,4 @@
 
 display_pid=$(ps -ef)
 
-echo "$display_pid" | less
+echo "$display_pid"
