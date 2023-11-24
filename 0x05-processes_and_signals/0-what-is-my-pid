@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 # Bash script that displays its own PID.
 
-display_pid=$(ps)
-
-echo "$display_pid" | less
+echo $$
