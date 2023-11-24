@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # displays a list of currently running processes.
 
-display_pid=$(ps -ef)
+display_pid=$(ps -aux)
 
 echo "$display_pid"
