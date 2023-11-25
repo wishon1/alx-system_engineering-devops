@@ -27,6 +27,6 @@ echo "$current_pid" > "$pid_file"
 
 while true; do
 	echo "To infinity and beyond"
-	sleep 2
+	sleep 1
 	trap_sigint_sigterm_sigquit
 done
