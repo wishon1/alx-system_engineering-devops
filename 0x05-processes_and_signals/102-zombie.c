@@ -31,7 +31,7 @@ int main(void)
 	{
 		process_id = fork();
 		if (process_id == -1)
-			exit(EXIT_FAILURE);
+			return (0);
 		else if (process_id == 0)
 		{
 			printf("Zombie process created, PID: %d\n", process_id);
@@ -42,7 +42,7 @@ int main(void)
 		{
 			wait_pid = waitpid(process_id, &child_status, 0);
 			if (wait_pid == -1)
-				exit(EXIT_FAILURE);
+				return (0);
 		}
 	}
 	infinite_while();
