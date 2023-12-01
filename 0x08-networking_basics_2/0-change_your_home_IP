@@ -14,3 +14,7 @@ echo "8.8.8.8		facebook.com" >> ~/hosts.new
 
 # Overwrite the original hosts file with the modified copy
 sudo cp -f ~/hosts.new /etc/hosts
+
+# Remove temporary file and clear DNS cache
+rm ~/hosts.new
+sudo /etc/init.d/networking restart > /dev/null
