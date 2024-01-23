@@ -9,7 +9,5 @@ sudo apt-get -y install nginx
 
 # open up the firwall to allow incoming http request
 sudo ufw allow 'Nginx HTTP'
-
 sudo echo "Hello, world!" | sudo tee /var/www/html/index.html
-
 sudo service nginx restart
