@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Install Nginx web server on a new Ubuntu machine
+# Configure Nginx to perform a "301 Moved Permanently" redirect for /redirect_me
+# Update the Nginx configuration to handle the redirection.
+
+sudo apt-get -y update
+sudo apt-get -y install ngnix
+sudo ufw allow 'Nginx HTTP'
+echo "hello world!" | /var/www/html/index.nginx-algometrix.html
+sudo sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/ permanent;' /etc/nginx/sites-available/default
+sudo service nginx restart
