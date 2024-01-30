@@ -6,7 +6,7 @@ This project aims to enhance the web stack by introducing redundancy for web ser
 ## Concepts
 For this project, understanding of the following concepts is required:
 - Load balancer([load-balancing](https://www.thegeekstuff.com/2016/01/load-balancer-intro/), [loadb-balancing Algorithm](https://community.f5.com/kb/technicalarticles/intro-to-load-balancing-for-developers-%E2%80%93-the-algorithms/273759)
-- [Web stack debuggingi]()
+- [Web stack debuggingi](https://github.com/wishon1/alx-system_engineering-devops/blob/master/0x0F-load_balancer/web-stack_debuging.md)
 
 ## Resources:
 - [Introduction to load-balancing and HAproxy](https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts)
