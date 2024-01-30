@@ -5,8 +5,13 @@ This project aims to enhance the web stack by introducing redundancy for web ser
 
 ## Concepts
 For this project, understanding of the following concepts is required:
-- Load balancer
-- Web stack debugging
+- Load balancer([load-balancing](https://www.thegeekstuff.com/2016/01/load-balancer-intro/), [loadb-balancing Algorithm](https://community.f5.com/kb/technicalarticles/intro-to-load-balancing-for-developers-%E2%80%93-the-algorithms/273759)
+- [Web stack debuggingi]()
+
+## Resources:
+- [Introduction to load-balancing and HAproxy](https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts)
+- [HTTP header](https://www.techopedia.com/definition/27178/http-header)
+- [Debian/Ubuntu HAProxy packages](https://haproxy.debian.net/)
 
 ## Background Context
 Two additional servers have been provided:
