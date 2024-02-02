@@ -47,5 +47,5 @@ frontend algomerix-frontend-https
 
 backend algomerix-backend
         balance roundrobin
-        server 420588-web-01 54.144.139.197:80 check
-        server 420588-web-02 34.203.29.50:80 check
+        server web_server_01 54.144.139.197:80 check
+        server web_server_02 34.203.29.50:80 check
