@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# debug so that nginx is listening on port 80 of all the server’s active
+
+# Remove the default Nginx configuration file
+rm /etc/nginx/sites-enabled/default
+
+# Symbolically link the default Nginx configuration file to enable it
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
+# Restart Nginx to apply the changes
+service nginx restart
