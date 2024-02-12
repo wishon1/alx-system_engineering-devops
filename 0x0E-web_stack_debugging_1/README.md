@@ -7,7 +7,7 @@
 [hat is an IP address](https://computer.howstuffworks.com/internet/basics/what-is-an-ip-address.htm)
 [hat is TCP/IP](https://www.avast.com/c-what-is-tcp-ip#)
 [hat is an Internet Protocol (IP) port?)](https://www.lifewire.com/port-numbers-on-computer-networks-817939)
-- [Web stack debugging]()
+- [Web stack debugging](https://github.com/wishon1/alx-system_engineering-devops/blob/master/0x13-firewall/webstackdebugiing.md)
 Certainly! Here's the updated README.md file including the provided commands and outputs:
 
 ---

@@ -1,6 +1,8 @@
 # 0x0D. Web Stack Debugging #0
 
 ## Description
+## Resources:
+ - [webstack debugging](https://github.com/wishon1/alx-system_engineering-devops/blob/master/0x13-firewall/webstackdebugiing.md)
 
 - Debugging project focusing on Docker, web stack, and network basics.
 

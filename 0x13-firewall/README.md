@@ -7,6 +7,7 @@ This project dives deeper into working on servers work without a firewall, under
 ## Resources
 
 - [What is a firewall](https://en.wikipedia.orgawiki/Firewall_%28computing%29)
+- [Webstack debugging](https://github.com/wishon1/alx-system_engineering-devops/blob/master/0x13-firewall/webstackdebugiing.md)
 - **More Info:**
   As explained in the web stack debugging guide, telnet is a valuable tool to check if sockets are open. For example, to check if port 22 is open on web-02:
 
