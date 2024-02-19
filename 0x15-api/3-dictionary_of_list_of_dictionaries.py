@@ -23,9 +23,10 @@ if __name__ == '__main__':
         username = user.get('username')
 
         # URL for fetching user's tasks
-        user_tasks_url =
-                        'https://jsonplaceholder.typicode.com/users/{}/todos/'.format(
-                         user_id)
+        user_tasks_url = (
+            'https://jsonplaceholder.typicode.com/users/{}/todos/'
+            .format(user_id)
+        )
         # Fetch user's tasks from the API
         user_tasks_response = get(user_tasks_url)
 
