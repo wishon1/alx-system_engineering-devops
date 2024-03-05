@@ -10,10 +10,8 @@ def top_ten(subreddit):
     # Construct the URL for the Reddit API endpoint
     url = f"https://www.reddit.com/r/{subreddit}/hot/.json"
 
-    # Set custom headers including User-Agent
-    headers = {
-        "User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"
-    }
+    # Set custom headers including User-Agen to avoid too many error
+    headers = {"User-Agent": "My User Agent 1.0"}
 
     # Send a GET request to the Reddit API
     response = requests.get(url, headers=headers, allow_redirects=False)
@@ -22,14 +20,14 @@ def top_ten(subreddit):
     if response.status_code == 404:
         print("None")
         return
+    else:
+        # Get the JSON response data
+        data = response.json().get("data")
 
-    # Get the JSON response data
-    data = response.json().get("data")
+        # Extract the list of post objects from the response data
+        children = data.get("children")
 
-    # Extract the list of post objects from the response data
-    children = data.get("children")[:10]
-
-    # Print the titles of the top 10 posts
-    for post in children:
-        title = post.get("data").get("title")
-        print(title)
+        # Print the titles of the top 10 posts
+        for post in range(10):
+            title = children[post].get("data").get("title")
+            print(title)
