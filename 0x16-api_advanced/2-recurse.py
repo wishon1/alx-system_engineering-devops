@@ -12,13 +12,12 @@ def recurse(subreddit, hot_list=[], after="", count=0):
 
     # Set custom user agent header as required by Reddit API
     headers = {
-        "User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"
+        "User-Agent": "wishon1"
     }
 
     # Parameters for the Reddit API request
     params = {
         "after": after,
-        "count": count,
         "limit": 100
     }
 
@@ -30,20 +29,19 @@ def recurse(subreddit, hot_list=[], after="", count=0):
     # Check if the subreddit is valid (status code 404 indicates not found)
     if response.status_code == 404:
         return None
+    else:
+        # Extract JSON response data
+        results = response.json().get("data")
+        after = results.get("after")
 
-    # Extract JSON response data
-    results = response.json().get("data")
-    after = results.get("after")
-    count += results.get("dist")
+        # Extract titles from the response and append them to the hot_list
+        for c in results.get("children"):
+            hot_list.append(c.get("data").get("title"))
 
-    # Extract titles from the response and append them to the hot_list
-    for c in results.get("children"):
-        hot_list.append(c.get("data").get("title"))
-
-    # If there are more pages of results,
-    # recursively call the function with updated parameters
-    if after is not None:
-        return recurse(subreddit, hot_list, after, count)
-
-    # Return the final list of hot post titles
-    return hot_list
+        # If there are more pages of results,
+        # recursively call the function with updated parameters
+        if after is not None:
+            return recurse(subreddit, hot_list, after)
+        else:
+            # Return the final list of hot post titles
+            return hot_list
