@@ -11,15 +11,17 @@ def number_of_subscribers(subreddit):
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
 
     # settting a custom user agent to avoid too many errors
-    headers = {"User-Agent": "My user Agent 1.0"}
+    user_header = {"User-Agent": "My user Agent 1.0"}
 
-    # send a get request to the Reddit API
-    response = requests.get(url, headers=headers, allow_redirects=False)
+    # send a get request to the Reddit API and convert response to json
+    response = requests.get(url, headers=user_header).json()
 
     # check if the request was unsucessful return 0
-    if response.status_code == 404:
+    try:
+        return response.get('data').get('suscribers')
+    except Exception:
         return 0
-    else:
-        # parse jSON response to extract no of suscribers
-        data = response.json().get("data", {})
-        return data.get("subscribers", 0)
+
+
+if __name__ == "__main__":
+    number_of_subscribers(argv[1])
