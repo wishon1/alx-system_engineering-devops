@@ -1,12 +1,7 @@
 # Curriculum
 
 ## SE Foundations
-- **Average:** 103.8%
-
 ## 0x19. Postmortem
-- **By:** Sylvain Kalache
-- **Weight:** 1
-- **Project Duration:** Mar 4, 2024 12:00 AM - Mar 11, 2024 1:00 AM
 
 ## Concepts
 For this project, we expect you to look at this concept:
