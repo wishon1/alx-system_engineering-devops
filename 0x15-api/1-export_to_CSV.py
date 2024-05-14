@@ -26,8 +26,10 @@ if __name__ == "__main__":
     with open('{}.csv'.format(user_id), 'w') as file:
         # Iterate over each task and write it to the CSV file
         for task in tasks:
+
             # Convert completion status to string (True/False)
             completed = str(task.get('completed'))
+
             # Write task details in CSV format
             file.write('"{}","{}","{}","{}"\n'.format(
                        user_id, user_name, completed, task.get('title')))
