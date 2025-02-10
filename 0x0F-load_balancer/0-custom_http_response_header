@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Automate Nginx installation and configuration
+
+printf "\n updating package list...\n"
+sudo apt-get update
+
+printf "\n installing ngnix..\n"
+sudo apt-get -y install nginx
+
+# add custom header
+sudo sed -i "/http {/a\         add_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
+
+printf "\n Restarting nginx...\n"
+sudo service nginx restart

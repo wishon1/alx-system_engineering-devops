@@ -1,0 +1,46 @@
+# Postmortem Report: Apache 500 Error Investigation and Resolution
+
+## Issue Summary
+
+- **Date**: March 8, 2024
+- **Description**: Apache server returning 500 Internal Server Error.
+- **Impact**: Disruption in web service functionality.
+
+## Investigation
+
+- **Tools Used**: `strace`, `tmux`, `curl`
+
+### Steps Taken:
+
+1. Attached `strace` to the Apache process.
+2. Ran `curl` to simulate a request while monitoring Apache with `strace`.
+3. Detected an issue related to a misconfigured WordPress theme.
+
+## Root Cause Analysis
+
+- **Cause**: Misconfiguration in the WordPress theme.
+- **Symptom**: Apache server returning 500 Internal Server Error due to a faulty WordPress theme configuration.
+
+## Resolution
+
+- **Solution**: Updated the WordPress theme configuration to resolve the issue.
+
+### Automation with Puppet
+
+- Puppet code (`0-strace_is_your_friend.pp`) was created to automate the resolution process.
+
+### Puppet Resource Used:
+
+- `file` resource type was utilized to manage the WordPress theme configuration file.
+
+## Verification
+
+- Ran `puppet apply` command to apply the Puppet manifest.
+- Confirmed successful execution of Puppet code.
+- Verified resolution by sending a request with `curl` and ensuring a 200 OK response.
+
+## Corrective and Preventative Measures
+
+- Regularly monitor Apache logs for any errors.
+- Implement automated testing for WordPress theme configurations.
+- Ensure continuous configuration management with Puppet to prevent similar issues in the future.

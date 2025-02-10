@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# print in list format the apache log file from greatest to smallest
+# using awk.
+
+awk '{print $1 " " $9}' apache-access.log | sort | uniq -c | sort -rn
